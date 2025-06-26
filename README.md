@@ -1,4 +1,6 @@
 ✅ Updated Go-Specific Advice for Each Project
+
+
 📁 1. Static Site Generator – with Go
 🔧 Go Libraries / Packages
 Markdown: github.com/gomarkdown/markdown

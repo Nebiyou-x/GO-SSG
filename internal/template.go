@@ -26,7 +26,6 @@ type PageData struct {
 	Content template.HTML
 }
 
-// ApplyTemplate wraps HTML content in a base HTML template with a title.
 func ApplyTemplate(title, content string) (string, error) {
 	tmpl, err := template.New("base").Parse(baseTemplate)
 	if err != nil {

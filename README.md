@@ -1,6 +1,6 @@
 # Go Static Site Generator (SSG)
 
-A simple, modern static site generator written in Go. Easily convert Markdown files to beautiful HTML, serve locally, and watch for changes.
+A simple,Beginner modern static site generator written in Go. Easily convert Markdown files to beautiful HTML, serve locally, and watch for changes.
 
 ## Features
 - Convert Markdown files in `content/` (including subdirectories) to HTML in `dist/`

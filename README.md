@@ -69,5 +69,3 @@ dist/            # Output directory (auto-generated)
 - If you see errors about missing Go modules, run `go mod tidy`.
 - If you change Go code, rebuild with `go build -o ssg ./cmd/ssg`.
 - If you get a permission error on `./ssg`, run `chmod +x ssg`.
-
-## License

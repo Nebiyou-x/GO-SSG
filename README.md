@@ -20,8 +20,8 @@ A simple, modern static site generator written in Go. Easily convert Markdown fi
 
 ### 1. Clone the repository
 ```sh
-git clone <your-repo-url>
-cd <repo-directory>/Go_proj
+git clone <https://github.com/Nebiyou-x/GO-SSG>
+cd <https://github.com/Nebiyou-x/GO-SSG>/Go_proj
 ```
 
 ### 2. Install Go (if you don't have it)

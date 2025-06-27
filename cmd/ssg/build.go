@@ -60,12 +60,11 @@ var buildCmd = &cobra.Command{
 			fmt.Println("Build complete.")
 		}
 
-		// Copy static assets
 		staticDir := "static"
 		err = filepath.Walk(staticDir, func(path string, info os.FileInfo, err error) error {
 			if err != nil {
 				if os.IsNotExist(err) {
-					return nil // skip if static dir doesn't exist
+					return nil
 				}
 				return err
 			}

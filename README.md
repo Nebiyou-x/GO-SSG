@@ -2,19 +2,36 @@
 
 A simple, modern static site generator written in Go. Easily convert Markdown files to beautiful HTML, serve locally, and watch for changes.
 
+---
+
+## 📸 Screenshot
+
+![Demo Screenshot](screenshot.png)
+*Example: Home page generated and served locally.*
+
+---
+
 ## Features
-- Convert Markdown files in `content/` (including subdirectories) to HTML in `dist/`
-- Copy static assets from `static/` to `dist/`
-- Basic HTML templating
-- Live local server with file watching and auto-rebuild
-- Modern, colorful default CSS
-- Automatic rebuild on file changes
-- Serve on a configurable port (default: 8080)
+| Feature                        | Description                                                                 |
+|--------------------------------|-----------------------------------------------------------------------------|
+| Markdown to HTML               | Converts all `.md` files in `content/` (including subfolders) to HTML        |
+| Static Asset Copy              | Copies everything from `static/` to `dist/` (CSS, images, JS, etc.)         |
+| HTML Templating                | Wraps content in a modern, customizable HTML template                        |
+| Live Local Server              | `ssg serve` starts a local HTTP server with file watching                    |
+| Auto Rebuild                   | Edits in `content/`, `static/`, or `templates/` trigger a rebuild           |
+| Modern CSS                     | Beautiful, colorful default styles (easy to customize)                       |
+| Configurable Port              | Serve on any port with `--port` flag                                        |
+| Beginner Friendly              | Simple CLI, clear structure, and easy to extend                              |
+
+---
 
 ## Quick Start
 
 ### 1. Clone the repository
-
+```sh
+git clone <your-repo-url>
+cd <repo-directory>/Go_proj
+```
 
 ### 2. Install Go (if you don't have it)
 - Download and install from: https://go.dev/dl/
@@ -60,15 +77,46 @@ dist/            # Output directory (auto-generated)
 ### 9. Customizing
 - Edit `static/css/style.css` for your own styles.
 - Edit Go code in `cmd/ssg/` and `internal/` to add features.
+- Add your own HTML templates in `templates/` (if supported).
+
+---
+
+## Example Output
+
+After running `./ssg build`, your `dist/` folder might look like:
+```
+dist/
+├── index.html
+├── posts/
+│   └── post1.html
+├── css/
+│   └── style.css
+└── img/
+    └── logo.png
+```
+
+---
+
+## Tips & Customization
+- **Add a logo:** Place an image in `static/img/` and reference it in your Markdown or template.
+- **Change colors:** Edit `static/css/style.css` for instant style changes.
+- **Add JS:** Place scripts in `static/js/` and reference them in your Markdown or template.
+- **Advanced:** Fork and extend the Go code for new features (pagination, blog index, etc.).
+
+---
 
 ## How it Works
 - **Build:** Recursively scans `content/` for Markdown files, converts them to HTML, and writes to `dist/` preserving the directory structure. Copies all static assets from `static/` to `dist/`.
 - **Serve:** Starts a local HTTP server serving the `dist/` directory. Watches for changes in `content/`, `static/`, and `templates/` and automatically rebuilds the site.
 
+---
+
 ## Troubleshooting
 - If you see errors about missing Go modules, run `go mod tidy`.
 - If you change Go code, rebuild with `go build -o ssg ./cmd/ssg`.
 - If you get a permission error on `./ssg`, run `chmod +x ssg`.
+
+---
 
 ## License
 MIT

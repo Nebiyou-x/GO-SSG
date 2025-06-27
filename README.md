@@ -71,4 +71,3 @@ dist/            # Output directory (auto-generated)
 - If you get a permission error on `./ssg`, run `chmod +x ssg`.
 
 ## License
-MIT
